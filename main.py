@@ -5,13 +5,12 @@ import re
 from Adafruit_IO import MQTTClient
 
 # Configuration for the serial port
-SERIAL_PORT = "/dev/tty.usbmodem143201"
+SERIAL_PORT = "/dev/tty.usbmodem143301"
 BAUD_RATE = 19200
 
 # Adafruit IO Configuration
-ADAFRUIT_IO_USERNAME = "Karlan"
-ADAFRUIT_IO_KEY = "aio_rmNP506coKyL3wS801W7zCG5OpV0"
-IO_FEED = "Temperature"
+ADAFRUIT_IO_USERNAME = "USERNAME"
+ADAFRUIT_IO_KEY = "KEY"
 
 last_push_time = 0
 
