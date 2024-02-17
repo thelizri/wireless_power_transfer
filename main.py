@@ -3,14 +3,19 @@ import sys
 import time
 import re
 from Adafruit_IO import MQTTClient
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Configuration for the serial port
 SERIAL_PORT = "/dev/tty.usbmodem143301"
 BAUD_RATE = 19200
 
 # Adafruit IO Configuration
-ADAFRUIT_IO_USERNAME = "USERNAME"
-ADAFRUIT_IO_KEY = "KEY"
+ADAFRUIT_IO_USERNAME = os.getenv("ADAFRUIT_IO_USERNAME")
+ADAFRUIT_IO_KEY = os.getenv("ADAFRUIT_IO_KEY")
 
 last_push_time = 0
 
@@ -92,6 +97,7 @@ if __name__ == "__main__":
     client.loop_background()
 
     last_push_time = time.time()  # Initialize the last push time
+    print(ADAFRUIT_IO_KEY)
 
     # Start reading from serial and publishing to Adafruit IO
     read_from_serial(SERIAL_PORT, client)
