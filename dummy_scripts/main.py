@@ -3,7 +3,7 @@ import random
 from datetime import datetime
 
 # Replace this with the actual URL of your API
-API_URL = "http://localhost:8000/charts/api/data/"
+API_URL = "http://william.discworld.cc/charts/api/data/"
 
 
 def get_dummy_data(node, packet_number):
