@@ -6,6 +6,22 @@ from datetime import datetime
 API_URL = "http://william.discworld.cc/charts/api/data/"
 
 
+def push_to_api(node, packet_number, temperature, light, humidity):
+    """Push the data to REST API."""
+    data = {
+        "packet_number": packet_number,
+        "node": node,
+        "temperature": temperature,
+        "light": light,
+        "humidity": humidity,
+    }
+    response = requests.post(API_URL, json=data)
+    if response.status_code != 201:
+        print(resp)
+        raise Exception("Failed to post data to the API.")
+    
+
+
 def get_dummy_data(node, packet_number):
     dummy_data = {
         "packet_number": packet_number,
