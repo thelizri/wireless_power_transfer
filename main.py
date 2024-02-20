@@ -19,7 +19,7 @@ ADAFRUIT_IO_USERNAME = os.getenv("ADAFRUIT_IO_USERNAME")
 ADAFRUIT_IO_KEY = os.getenv("ADAFRUIT_IO_KEY")
 
 # URL to our own API
-REST_API_URL = os.getenv("API_URL")
+REST_API_URL = os.getenv("REST_API_URL")
 
 last_push_to_adafruit_io_time = 0
 
@@ -99,9 +99,9 @@ def parse_data(data):
     packet_number = packet_match.group(1) if packet_match else None
 
     # Pattern for node number
-    node_pattern = r"Node\s+#\s+(\d+)"
+    node_pattern = r"Node\s*(\d+)"
     node_match = re.search(node_pattern, data)
-    node = node_match.group(1) if node_match else None
+    node = node_match.group(1) if node_match else -1
 
     return {
         "node": node,
