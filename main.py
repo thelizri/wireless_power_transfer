@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuration for the serial port
-SERIAL_PORT = "/dev/tty.usbmodem143301"
+SERIAL_PORT = "/dev/tty.usbmodem142301"
 BAUD_RATE = 19200
 
 # Adafruit IO Configuration
