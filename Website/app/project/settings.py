@@ -33,13 +33,9 @@ INSTALLED_APPS = [
     # Third party apps
     "django_prometheus",
     "rest_framework",
-    "authentication",
-    "ckeditor",
     "channels",
     # Local apps
-    "blog",
     "charts",
-    "portfolio",
 ]
 
 MIDDLEWARE = [
