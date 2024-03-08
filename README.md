@@ -10,3 +10,9 @@ IK1332 VT24 Group Project
 - data_rate.py (Python script for measuring data rate)
 - main.py (Python script that communicates over serial with access point and pushes data online)
 - range_plot.py (Script for creating range_plot)
+
+## Websites
+http://william.discworld.cc/charts/
+
+## Adafruit
+https://io.adafruit.com/Karlan/dashboards/wireless-power-transfer?kiosk=true
